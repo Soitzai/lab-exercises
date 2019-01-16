@@ -1,52 +1,25 @@
-## Part 1: Debugging
+# Exercise 3: writing and executing functions
 
-my_num <- 6
-initials <- "?. ?."
+# Define a function `add_three` that takes a single argument and
+# returns a value 3 greater than the input
+add_three <- function(x) {
+  result <- x + 3
+  result
+}
 
-my_vector <- c(my_num, initials)
+# Create a variable `ten` that is the result of passing 7 to your `add_three` 
+# function
+ten <- add_three(7)
 
-# run ?sum to get more info
-vector_sum <- sum(my_vector)
+# Define a function `imperial_to_metric` that takes in two arguments: a number 
+# of feet and a number of inches
+# The function should return the equivalent length in meters
+imperial_to_metric <- function(feet, inches){
+  total_inches <- 12 * feet + inches
+  meters <- .025 * total_inches
+  meters
+}
 
-# Describe why this doesn't work: 
-# 
-
-install.packages("stringr")
-
-my_line <- "Hey, hey, this is the library"
-
-print(str_length(my_line))
-
-# Describe why this doesn't work: 
-# 
-
-said_the_famous <- paste(my_line, " - ", initial)
-
-# Describe why this doesn't work: 
-# 
-
-
-## Part 2 - Vector and function practice
-
-# Make a vector and use typeof to check what type R considers it to be
-
-# Write a function `compare_length` that takes in 2 vectors, and returns the sentence:
-# "The difference in lengths is N"
-
-
-# Pass two vectors of different length to your `compare_length` function
-
-
-# Write a function `describe_difference` that will return one of the following statements:
-# "Your first vector is longer by N elements"
-# "Your second vector is longer by N elements"
-
-# Pass two vectors to your `describe_difference` function
-
-
-# Write a function `combine_vectors` that takes in 3 vectors and combines them into one
-
-# Send 3 vectors to your function to test it.
-
-# Write a function `caps_time` that takes in a vector of names of courses you're taking, ex "Informatics 201" and removes all capital letters
-
+# Create a variable `height_in_meters` by passing your height in imperial to the
+# `imperial_to_metric` function
+height_in_meters <- imperial_to_metric(6, 2)
